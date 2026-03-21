@@ -1,0 +1,101 @@
+/* PAGE 2 HEADER */
+.page2-header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.page2-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* GRID LAYOUT */
+.page2-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px;
+}
+
+/* IMAGE PLACEHOLDER */
+.image-box {
+    background-color: #ccc;
+    height: 250px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* X effect (like your wireframe) */
+.image-box::before,
+.image-box::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: black;
+    top: 50%;
+    left: 0;
+}
+
+.image-box::before {
+    transform: rotate(45deg);
+}
+
+.image-box::after {
+    transform: rotate(-45deg);
+}
+
+/* TEXT BOX */
+.text-box {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* FEATURE SECTION */
+.feature {
+    grid-column: 1 / 3;
+    height: 300px;
+    background-color: #ddd;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* X effect for feature */
+.feature::before,
+.feature::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: black;
+}
+
+.feature::before {
+    transform: rotate(20deg);
+}
+
+.feature::after {
+    transform: rotate(-20deg);
+}
+
+/* INNER TEXT BOX */
+.feature-text {
+    background: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .page2-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature {
+        grid-column: 1;
+    }
+}
