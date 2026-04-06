@@ -4,37 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Rexburg Ultimate Frisbee</title>
+    <link rel="stylesheet" href="styles\styles_1.css">
 </head>
 <body>
 
-    <!-- Header / Nav -->
-    <div>
-        <img src="logo.png" alt="Rexburg Ultimate Frisbee Logo">
-        <br>
-        <a href="index.html">Home</a> |
-        <a href="gallery.html">Gallery</a> |
+    <!-- Header -->
+    <header class="site-header">
+        <img src="images\trex_logo.png" alt="Rexburg Ultimate Frisbee Logo">
+    </header>
+
+    <!-- Nav -->
+    <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="gallery.html" class="active">Gallery</a>
         <a href="what-is-ultimate.html">What is Ultimate?</a>
+    </nav>
+
+    <!-- Banner / Intro -->
+    <div class="gallery-banner">
+        <h1>Take a Look...</h1>
+        <p>Like what you see? Whether you want to join in on the fun, become a spectator, or want to be a booster — follow us on Instagram! We'd love to welcome you to the T-Rexburg family!</p>
+        <p>A collection of photos from the various tournaments we attend throughout the years. Whether it's 3v3, 5v5, or the pinnacle of Ultimate at 7v7 — we make it to as many as we can in the Idaho-Utah area.</p>
     </div>
 
-    <hr>
-
-    <h1>Gallery</h1>
-    <h2>Looking Good</h2>
-    <p>Like what you see? Whether you want to join in on the fun, become a spectator, or want to be a booster. Follow us on Instagram! We'd love to see you around and welcome you to the T-rexburg family!</p>
-    <p>A collection of photos that are from the various tournaments that we go to throughout the years. Whether it is 3v3, 5v5, or the pinnacle of Ultimate at 7v7. We make it to as many as we can in the Idaho-Utah area.</p>
-    <!-- Gallery images go here -->
-    <div>
-        <img src="images\Trexburg_3-on-3_Tournament_-_Aug_2025_83.jpg" alt="Gallery photo 1" width="300">
-        <img src="images\Trexburg_3-on-3_Tournament_-_Aug_2025_6.jpg" alt="Gallery photo 2" width="300">
-        <img src="images\Jordan_Ultimate_BYUI_2024_35.jpg" alt="Gallery photo 3" width="300">
+    <!-- 3-column image grid -->
+    <div class="gallery-grid-3">
+        <img src="images\Trexburg_3-on-3_Tournament_-_Aug_2025_83.jpg" alt="Gallery photo 1">
+        <img src="images\Trexburg_3-on-3_Tournament_-_Aug_2025_6.jpg" alt="Gallery photo 2">
+        <img src="images\20251025_165726.jpg" alt="Gallery photo 3">
     </div>
 
-    <hr>
+    <!-- Full-width wide image -->
+    <div class="gallery-wide">
+        <img src="images\Jordan_Ultimate_BYUI_2024_35.jpg" alt="Wide action shot">
+    </div>
+
+    <!-- 2-column image grid -->
+    <div class="gallery-grid-2">
+        <img src="images\IMG_0524.jpg" alt="Gallery photo 4">
+        <img src="images\Jordan_Ultimate_BYUI_2024_23.jpg" alt="Gallery photo 5">
+    </div>
 
     <!-- Footer -->
-    <div>
-        <p>Instagram 📷 <a href="https://www.instagram.com/trexburgvlinate" target="_blank">@trexburgvlinate</a></p>
-    </div>
+    <footer class="site-footer">
+        <p>Instagram 📷 <a href="https://www.instagram.com/trexburgultimate" target="_blank">@trexburgultimate</a></p>
+    </footer>
 
 </body>
 </html>

@@ -1,0 +1,224 @@
+/* ── Variables ─────────────────────────────────── */
+:root {
+    --primary-color:   #1469cc;
+    --secondary-color: #9ea5ab;
+    --accent1-color:   #35f8fe;
+    --accent2-color:   white;
+
+    --font-heading: 'Barlow Condensed', sans-serif;
+    --font-body:    'Source Sans 3', sans-serif;
+}
+
+/* ── Reset / Base ──────────────────────────────── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--accent2-color);
+    color: #1a1a2e;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto auto auto;
+    min-height: 100vh;
+}
+
+/* ── Header ────────────────────────────────────── */
+.site-header {
+    background-color: var(--primary-color);
+    display: grid;
+    place-items: center;
+    padding: 1.5rem 2rem;
+}
+
+.site-header img {
+    max-height: 80px;
+    width: auto;
+}
+
+/* ── Nav ───────────────────────────────────────── */
+.site-nav {
+    background-color: #0f50a0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.site-nav a {
+    color: var(--accent2-color);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.75rem 1rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+    background-color: var(--accent1-color);
+    color: var(--primary-color);
+}
+
+/* ── Hero ──────────────────────────────────────── */
+.hero {
+    width: 100%;
+    max-height: 420px;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+}
+
+.hero img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── Content Sections ──────────────────────────── */
+.section-welcome,
+.section-what {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 5%;
+}
+
+.section-what {
+    background-color: #f0f6ff;
+}
+
+.section-text h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.75rem;
+    border-bottom: 3px solid var(--accent1-color);
+    padding-bottom: 0.4rem;
+    display: inline-block;
+}
+
+.section-text p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+.section-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    background-color: var(--secondary-color);
+}
+
+/* Reverse order for section 2 (image left, text right) */
+.section-what .section-image {
+    order: -1;
+}
+
+/* ── Footer ────────────────────────────────────── */
+.site-footer {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    text-align: center;
+    padding: 1.25rem 2rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+}
+
+.site-footer a {
+    color: var(--accent1-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ── Gallery Page ──────────────────────────────── */
+.gallery-banner {
+    background-color: var(--primary-color);
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+.gallery-banner h1 {
+    font-family: var(--font-heading);
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--accent1-color);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+}
+
+.gallery-banner p {
+    color: var(--accent2-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0.5rem auto 0;
+}
+
+/* 3-column small image grid */
+.gallery-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    padding: 1.5rem 5%;
+    background-color: #f0f6ff;
+}
+
+.gallery-grid-3 img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+/* Full-width wide image */
+.gallery-wide {
+    width: 100%;
+    padding: 0 5% 1.5rem;
+    background-color: #f0f6ff;
+}
+
+.gallery-wide img {
+    width: 100%;
+    height: 580px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+/* 2-column larger image grid */
+.gallery-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 0 5% 2rem;
+    background-color: #f0f6ff;
+}
+
+.gallery-grid-2 img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+/* ── Google Fonts import ───────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap');
